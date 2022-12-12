@@ -39,9 +39,6 @@ export class DataEntryForm extends React.Component<Props> {
         const name = target.name;
 
         this.setState((state: {entries: DataEntry[], requestData: any}) => {
-            state.entries.forEach(e => {
-                state.requestData[e.requestAttribute] = e.value
-            })
             return {
                 entries: state.entries.map(e => {
                     if (e.requestAttribute === name) {
