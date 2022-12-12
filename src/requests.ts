@@ -1,5 +1,5 @@
 export function fetchPrediction(data: any): Promise<number> {
-    return fetch(`0.0.0.0:5050/api/predict`, {
+    return fetch(`http://localhost:5050/api/predict`, {
         method: 'POST',
         headers:{
             'Content-Type':'application/json'
