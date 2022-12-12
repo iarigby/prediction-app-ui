@@ -21,12 +21,18 @@ export class DataEntryLabel extends React.Component<Props> {
 
     render() {
         return (
-            <label>
-                {this.data.displayName}
+            <label className="entry-label">
+                <div className="label-text">
+                    {this.data.displayName}
+                </div>
                 <input
+                    required
                     name={this.data.requestAttribute}
                     type="number"
-                    value={this.data.value}
+                    min={this.data.minValue}
+                    max={this.data.maxValue}
+                    defaultValue={this.data.value}
+                    step="any"
                     onChange={this.handleInputChange} />
             </label>
         )
